@@ -1,0 +1,14 @@
+{
+  "name": "proyecto-compiladores",
+  "version": "1.0.0",
+  "description": "proyecto para compiladores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuli Diaz",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
