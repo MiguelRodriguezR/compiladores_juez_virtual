@@ -4,8 +4,6 @@ const exec = require("child_process").exec;
 
 router.get("/", (req, res) => {
   console.log("Request received.");
-  res.writeHead(200, { "Content-Type": "text/plain" });
-
   //executes my shell script - main.sh when a request is posted to the server
   exec("sh main.sh", function (err, stdout, stderr) {
     if (err) console.log(err);
