@@ -1,3 +1,5 @@
+const exec = require("child_process").exec;
+
 exports.compileFile = (req, res) => {
     console.log("Request received.");
     //executes my shell script - main.sh when a request is posted to the server

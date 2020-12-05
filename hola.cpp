@@ -2,6 +2,6 @@
 using namespace std;
 int main()
 {
-    std::cut << "Hola Mundo!";
+    std::cout << "Hola Mundo!";
     return 1;
 }
