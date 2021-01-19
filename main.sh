@@ -16,7 +16,7 @@ int main()
     cout<<a<<\"+\"<<b<<\"=\"<<c<<endl;
 
 return 0;
-}" > hola.cpp
+}" > test.cpp
 g++ test.cpp -o testexe
 chmod +x testexe
 a=1
@@ -26,4 +26,4 @@ $a
 $b
 EOF
 rm ejec
-rm hola.cpp
+rm test.cpp
