@@ -8,11 +8,11 @@ int main(int argc, const char*argv[])
     c=a+b;
     cout<<"\n"<<a<<"+"<<b<<"="<<c<<endl;
     return 0;
-}" > hola.cpp
+}" > test.cpp
 g++ test.cpp -o testexe
 chmod +x testexe
 a=1
 b=2
 ./testexe  $a $b
 rm ejec
-rm hola.cpp
+rm test.cpp
