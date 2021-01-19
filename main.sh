@@ -25,5 +25,5 @@ b=2
 $a
 $b
 EOF
-rm ejec
+rm testexe
 rm test.cpp
