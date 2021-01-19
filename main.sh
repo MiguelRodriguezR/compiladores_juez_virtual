@@ -13,7 +13,7 @@ int main()
     cin>>b;
 
     c=a+b;
-    cout<<"\n"<<a<<"+"<<b<<"="<<c<<endl;
+    cout<<a<<\"+\"<<b<<\"=\"<<c<<endl;
 
 return 0;
 }" > hola.cpp
