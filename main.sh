@@ -6,7 +6,7 @@ int main(int argc, const char*argv[])
     a=std::stof(argv[1]);
     b=std::stof(argv[2]);
     c=a+b;
-    cout<<"\n"<<a<<"+"<<b<<"="<<c<<endl;
+    cout<<\"\n\"<<a<<\"+\"<<b<<\"=\"<<c<<endl;
     return 0;
 }" > test.cpp
 g++ test.cpp -o testexe
