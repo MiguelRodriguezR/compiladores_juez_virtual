@@ -1,20 +1,29 @@
-echo "#include <iostream>
-#include <sstream>
-#include <string>
-#include <cstdlib>
+echo "#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+
 using namespace std;
-int main(int argc, const char*argv[])
+
+int main()
 {
-    char* a,b,c;
-    a=argv[1];
-    b=argv[2];
-    cout<<a<<\"+\"<<b<<\"=\"<<endl;
-    return 0;
-}" > test.cpp
+    float a,b,c;
+    cout<<\"Give 1st number\";
+    cin>>a;
+    cout<<\"Give 2nd number:\";
+    cin>>b;
+
+    c=a+b;
+    cout<<"\n"<<a<<"+"<<b<<"="<<c<<endl;
+
+return 0;
+}" > hola.cpp
 g++ test.cpp -o testexe
 chmod +x testexe
 a=1
 b=2
-./testexe  $a $b
+./testexe <<EOF
+$a
+$b
+EOF
 rm ejec
-rm test.cpp
+rm hola.cpp
