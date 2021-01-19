@@ -1,6 +1,7 @@
 echo "#include <iostream>
 #include <sstream>
 #include <string>
+#include <cstdlib>
 using namespace std;
 int main(int argc, const char*argv[])
 {
