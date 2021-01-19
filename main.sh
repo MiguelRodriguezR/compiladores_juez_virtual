@@ -5,7 +5,7 @@ echo "#include <iostream>
 using namespace std;
 int main(int argc, const char*argv[])
 {
-    float a,b,c;
+    char* a,b,c;
     a=argv[1];
     b=argv[2];
     cout<<a<<\"+\"<<b<<\"=\"<<endl;
