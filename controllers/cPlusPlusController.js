@@ -17,7 +17,7 @@ exports.compileFile = (req, res) => {
       respuestaEsperada: 75,
     },
   ];
-  respuestasCasos = [];
+  const respuestasCasos = [];
   for (let i; i < casos.length; i++) {
     const name = `${nameHash}${i}`;
     shBuilder.createShFile(name, req.body.code, casos[i].parametros, () => {
@@ -44,5 +44,5 @@ exports.compileFile = (req, res) => {
         console.error(err)
       }
   }
-  res.send(respuestasCasos);
+  return res.send(respuestasCasos);
 };
