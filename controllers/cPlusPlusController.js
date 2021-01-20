@@ -2,9 +2,9 @@ const exec = require("child_process").exec;
 const { request } = require("express");
 const router = require("../routes/cplusplus");
 const shBuilder = require("../helpers/shBuilder");
-const fs = require('fs')
+const fs = require("fs");
 
-exports.compileFile = (req, res) => {
+exports.compileFile = async (req, res) => {
   const nameHash = "testerFile";
   const idProblema = req.body.idProblem;
   const casos = [
@@ -18,32 +18,34 @@ exports.compileFile = (req, res) => {
     },
   ];
   const respuestasCasos = [];
-  for (let i; i < casos.length; i++) {
-    const name = `${nameHash}${i}`;
-    shBuilder.createShFile(name, req.body.code, casos[i].parametros, () => {
-      exec(`sh ${name}.sh`, function (err, stdout, stderr) {
-        if (stdout) {
-          // se envia el codigo 200 todo esta bien al compilar
-          if (stdout == casos[i].respuestaEsperada) {
-            respuestasCasos.push(`test ${i} Pass`);
-          } else {
-            respuestasCasos.push(
-              `Se esperaba: "${casos[i].respuestaEsperada}" en vez de: "${casos[i].respuestaEsperada}"`
-            );
+  await Promise.all(
+    casos.map(async (caso, i) => {
+      const name = `${nameHash}${i}`;
+      shBuilder.createShFile(name, req.body.code, caso.parametros, () => {
+        exec(`sh ${name}.sh`, function (err, stdout, stderr) {
+          if (stdout) {
+            // se envia el codigo 200 todo esta bien al compilar
+            if (stdout == caso.respuestaEsperada) {
+              respuestasCasos.push(`test ${i} Pass`);
+            } else {
+              respuestasCasos.push(
+                `Se esperaba: "${caso.respuestaEsperada}" en vez de: "${stdout}"`
+              );
+            }
+          } else if (stderr) {
+            // se enia el codigo 400 hay un error al compilar
+            res.status(400).json({ msg: stderr });
           }
-        } else if (stderr) {
-          // se enia el codigo 400 hay un error al compilar
-          res.status(400).json({ msg: stderr });
-        }
-        console.log(respuestasCasos);
+          console.log(respuestasCasos);
+        });
       });
-    });
-    try {
-        fs.unlinkSync(`./${name}.sh`)
+      try {
+        fs.unlinkSync(`./${name}.sh`);
         //file removed
-      } catch(err) {
-        console.error(err)
+      } catch (err) {
+        console.error(err);
       }
-  }
-  return res.send(respuestasCasos);
+    })
+  );
+  res.send(respuestasCasos);
 };
