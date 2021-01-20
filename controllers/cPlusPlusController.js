@@ -33,6 +33,7 @@ exports.compileFile = async (req, res) => {
                   `Se esperaba: "${caso.respuestaEsperada}" en vez de: "${stdout}"`
                 );
               }
+              res.json(respuestasCasos);
             } else if (stderr) {
               // se enia el codigo 400 hay un error al compilar
               // res.status(400).json({ msg: stderr });
@@ -48,7 +49,6 @@ exports.compileFile = async (req, res) => {
         }
       })
     );
-    res.json(respuestasCasos);
   } catch (error) {
     console.log(error);
   }
