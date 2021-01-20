@@ -46,7 +46,7 @@ exports.compileFile = async (req, res) => {
               try {
                 res.status(400).json({ msg: stderr });
               } catch (e) {
-                  console.log('error');
+                console.log("error");
               }
             }
             try {
@@ -57,7 +57,11 @@ exports.compileFile = async (req, res) => {
             }
             console.log("result ------>", stdout);
             if (i == casos.length - 1) {
-              res.json({ respuestasCasos });
+              try {
+                res.json({ respuestasCasos });
+              } catch (err) {
+                console.error(err);
+              }
             }
           });
         });
