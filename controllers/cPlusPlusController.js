@@ -35,6 +35,7 @@ exports.compileFile = (req, res) => {
           // se enia el codigo 400 hay un error al compilar
           res.status(400).json({ msg: stderr });
         }
+        console.log(respuestasCasos);
       });
     });
     try {
