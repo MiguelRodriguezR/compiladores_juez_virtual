@@ -10,6 +10,10 @@ exports.compileFile = async (req, res) => {
     const idProblema = req.body.idProblem;
     const casos = [
       {
+        parametros: [2, 2],
+        respuestaEsperada: 4,
+      },
+      {
         parametros: [1, 2],
         respuestaEsperada: 3,
       },
@@ -41,7 +45,7 @@ exports.compileFile = async (req, res) => {
               // se enia el codigo 400 hay un error al compilar
               // res.status(400).json({ msg: stderr });
             }
-            console.log(stdout);
+            console.log('result ------>', stdout);
             if (i == casos.length - 1) {
               res.json({ respuestasCasos });
             }
