@@ -1,0 +1,50 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "title": "Sumas",
+      "description": "en este problema se deebe sumar dos numeros enteros",
+      "casos": [
+        {
+          "parametros": [2, 2],
+          "respuestaEsperada": 4
+        },
+        {
+          "parametros": [1, 2],
+          "respuestaEsperada": 3
+        },
+        {
+          "parametros": [5, 5],
+          "respuestaEsperada": 10
+        },
+        {
+          "parametros": [25, 50],
+          "respuestaEsperada": 75
+        }
+      ]
+    },
+    {
+        "id": 2,
+        "title": "Multiplicación",
+        "description": "en este problema se debe multiplicar tres numeros enteros",
+        "casos": [
+          {
+            "parametros": [2, 2, 2],
+            "respuestaEsperada": 8
+          },
+          {
+            "parametros": [1, 2, 3],
+            "respuestaEsperada": 5
+          },
+          {
+            "parametros": [-5, 5, 1],
+            "respuestaEsperada": -10
+          },
+          {
+            "parametros": [100, 10, 10],
+            "respuestaEsperada": 10000
+          }
+        ]
+      }
+  ]
+}
