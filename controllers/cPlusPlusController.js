@@ -43,7 +43,9 @@ exports.compileFile = async (req, res) => {
               }
             } else if (stderr) {
               // se enia el codigo 400 hay un error al compilar
-              // res.status(400).json({ msg: stderr });
+              try {
+                res.status(400).json({ msg: stderr });
+              } catch {}
             }
             try {
               fs.unlinkSync(`./${name}.sh`);
