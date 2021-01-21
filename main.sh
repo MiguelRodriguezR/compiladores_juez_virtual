@@ -6,13 +6,10 @@ using namespace std;
 
 int main()
 {
-    float a,b,c,d;
-    cin>>a;
-    cin>>b;
-    cin>>c;
+    string nombre;
+    cin>>nombre;
 
-    d=a*b*c;
-    cout<<d<<endl;
+    cout<<nombre+" como estas";
 
 return 0;
 }" > test.cpp

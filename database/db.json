@@ -10,6 +10,10 @@
           "respuestaEsperada": 4
         },
         {
+          "parametros": [8, 8],
+          "respuestaEsperada": 16
+        },
+        {
           "parametros": [1, 2],
           "respuestaEsperada": 3
         },
@@ -49,6 +53,29 @@
             "respuestaEsperada": 10000
           }
         ]
-      }
+      },
+      {
+        "id": 3,
+        "title": "Hola",
+        "description": "en este problema se debe pedir un string y acontinuacion poner espacio y como estas",
+        "casos": [
+          {
+            "parametros": ["hugo"],
+            "respuestaEsperada": "hugo como estas"
+          },
+          {
+            "parametros": ["Yuli"],
+            "respuestaEsperada": "Yuli como estas"
+          },
+          {
+            "parametros": ["Miguel"],
+            "respuestaEsperada": "Miguel como estas"
+          },
+          {
+            "parametros": ["Luis"],
+            "respuestaEsperada": "Luis como estas"
+          }
+        ]
+      } 
   ]
 }
