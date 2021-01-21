@@ -9,8 +9,8 @@ exports.compileFile = async (req, res) => {
   try {
     const nameHash = "testerFile";
     const idProblema = req.body.idProblem;
-    const response = await axios.get(`localhost:3000/problems/${idProblema}`);
-    const casos = response.casos;
+    const response = await axios.get(`http://localhost:3000/problems/${idProblema}`);
+    const casos = response.data.casos;
     const respuestasCasos = [];
     await Promise.all(
       casos.map(async (caso, i) => {

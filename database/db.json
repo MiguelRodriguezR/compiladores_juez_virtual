@@ -14,6 +14,10 @@
           "respuestaEsperada": 3
         },
         {
+          "parametros": [28, 42],
+          "respuestaEsperada": 70
+        },
+        {
           "parametros": [5, 5],
           "respuestaEsperada": 10
         },
@@ -34,11 +38,11 @@
           },
           {
             "parametros": [1, 2, 3],
-            "respuestaEsperada": 5
+            "respuestaEsperada": 6
           },
           {
             "parametros": [-5, 5, 1],
-            "respuestaEsperada": -10
+            "respuestaEsperada": -25
           },
           {
             "parametros": [100, 10, 10],

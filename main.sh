@@ -6,14 +6,13 @@ using namespace std;
 
 int main()
 {
-    float a,b,c;
-    cout<<\"Give 1st number\";
+    float a,b,c,d;
     cin>>a;
-    cout<<\"Give 2nd number:\";
     cin>>b;
+    cin>>c;
 
-    c=a+b;
-    cout<<a<<\"+\"<<b<<\"=\"<<c<<endl;
+    d=a*b*c;
+    cout<<d<<endl;
 
 return 0;
 }" > test.cpp
