@@ -7,9 +7,9 @@ using namespace std;
 int main()
 {
     float a,b,c;
-    cout<<\"Give 1st number\";
+    cout<<\"ingrese 1st numero\";
     cin>>a;
-    cout<<\"Give 2nd number:\";
+    cout<<\"ingrese 2nd numero:\";
     cin>>b;
 
     c=a+b;
