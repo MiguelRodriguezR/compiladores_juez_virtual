@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const axios = require("axios");
 
-router.get('/', (req,res) => {
-    res.send('<h1>TITULO GRANDE</h1>');
+
+router.get('/', async (req,res) => {
+    const response = await axios.get(`http://localhost:3000/problems`);
+    res.send(response.data);
 });
 
 module.exports = router;
