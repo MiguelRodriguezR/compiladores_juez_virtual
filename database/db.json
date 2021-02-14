@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Sumas",
-      "categoria": "matematicas",
+      "categoria": "Matematicas",
       "description": "en este problema se deebe sumar dos numeros enteros",
       "usersPass": [],
       "casos": [
@@ -34,74 +34,111 @@
       ]
     },
     {
-        "id": 2,
-        "title": "Multiplicación",
-        "description": "en este problema se debe multiplicar tres numeros enteros",
-        "casos": [
-          {
-            "parametros": [2, 2, 2],
-            "respuestaEsperada": 8
-          },
-          {
-            "parametros": [1, 2, 3],
-            "respuestaEsperada": 6
-          },
-          {
-            "parametros": [-5, 5, 1],
-            "respuestaEsperada": -25
-          },
-          {
-            "parametros": [100, 10, 10],
-            "respuestaEsperada": 10000
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Hola",
-        "categoria": "matematicas",
-        "description": "en este problema se debe pedir un string y acontinuacion poner espacio y como estas",
-        "casos": [
-          {
-            "parametros": ["hugo"],
-            "respuestaEsperada": "hugo como estas"
-          },
-          {
-            "parametros": ["Yuli"],
-            "respuestaEsperada": "Yuli como estas"
-          },
-          {
-            "parametros": ["Miguel"],
-            "respuestaEsperada": "Miguel como estas"
-          },
-          {
-            "parametros": ["Luis"],
-            "respuestaEsperada": "Luis como estas"
-          }
-        ]
-      } 
+      "id": 4,
+      "title": "test",
+      "categoria": "Matematicas",
+      "description": "en este problema se deebe sumar dos numeros enteros asd asd asdasd asaasdasdasdasd asdasd asdsadas das asdas das as dasdasdasdasd as dasdas dasdasdasd as das dasd a sdas d as d as dsasda",
+      "usersPass": [],
+      "casos": [
+        {
+          "parametros": [2, 2],
+          "respuestaEsperada": 4
+        },
+        {
+          "parametros": [8, 8],
+          "respuestaEsperada": 16
+        },
+        {
+          "parametros": [1, 2],
+          "respuestaEsperada": 3
+        },
+        {
+          "parametros": [28, 42],
+          "respuestaEsperada": 70
+        },
+        {
+          "parametros": [5, 5],
+          "respuestaEsperada": 10
+        },
+        {
+          "parametros": [25, 50],
+          "respuestaEsperada": 75
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Multiplicación",
+      "categoria": "Matematicas",
+      "description": "en este problema se debe multiplicar tres numeros enteros",
+      "casos": [
+        {
+          "parametros": [2, 2, 2],
+          "respuestaEsperada": 8
+        },
+        {
+          "parametros": [1, 2, 3],
+          "respuestaEsperada": 6
+        },
+        {
+          "parametros": [-5, 5, 1],
+          "respuestaEsperada": -25
+        },
+        {
+          "parametros": [100, 10, 10],
+          "respuestaEsperada": 10000
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Hola",
+      "categoria": "Geometria",
+      "description": "en este problema se debe pedir un string y acontinuacion poner espacio y como estas",
+      "casos": [
+        {
+          "parametros": ["hugo"],
+          "respuestaEsperada": "hugo como estas"
+        },
+        {
+          "parametros": ["Yuli"],
+          "respuestaEsperada": "Yuli como estas"
+        },
+        {
+          "parametros": ["Miguel"],
+          "respuestaEsperada": "Miguel como estas"
+        },
+        {
+          "parametros": ["Luis"],
+          "respuestaEsperada": "Luis como estas"
+        }
+      ]
+    }
   ],
-
   "users": [
     {
       "id": 1,
       "email": "lucho@lucho.com",
-      "password": "lucho"
+      "password": "lucho",
+      "solvedProblems": [1, 2]
     },
     {
       "id": 2,
       "email": "yuli@yuli.com",
-      "password": "yuli"
+      "password": "yuli",
+      "solvedProblems": []
     },
     {
       "id": 4,
       "email": "demomintic@outlook.com",
-      "password": "monolegaldemo"
+      "password": "monolegaldemo",
+      "solvedProblems": [3]
     },
     {
       "email": "plex2a@live.ru",
       "password": "as",
-      "id": 3
+      "id": 3,
+      "solvedProblems": []
     }
   ]
 }
